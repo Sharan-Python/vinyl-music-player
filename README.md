@@ -1,1 +1,1 @@
-# vinyl-music-player
+# Vinyl Music Player
