@@ -1,8 +1,10 @@
 from tkinter import *
+from tkinter import ttk
 import pygame
 from tkinter import filedialog
 import os
 from tinytag import TinyTag
+from PIL import ImageTk, Image
 
 win = Tk()
 win.geometry("500x300")
@@ -12,6 +14,25 @@ win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
 pygame.mixer.init()
+
+
+class Popup(Toplevel):
+    def __init__(self, title='', message='', master=None, **kwargs):
+        super().__init__(master, **kwargs)
+        self.title(title)
+
+        lbl = Label(self, text=message, font=('bold', 14))
+        lbl.pack()
+        btn = ttk.Button(self, text="OK", command=self.destroy)
+        btn.pack()
+
+        self.transient(self.master)
+        self.grab_set()
+        self.master.wait_window(self)
+
+
+def about():
+    Popup("About Music Player", "Powered By Python \n Version 1.1")
 
 
 def set_vol(val):
@@ -30,16 +51,51 @@ def white():
 
 
 def open_():
-    global w
+    global w, img, rp
     global r
     global k
     w = filedialog.askopenfilename()
-    r = os.path.basename(w)
     k = TinyTag.get(w)
+    gr = k.title
+    pl = os.path.basename(w)
+    rp = w.strip(pl)
     win.update()
     win.update_idletasks()
     pygame.mixer.init()
     Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+    Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+          anchor=W).place(x=0, y=280)
+    list1.insert(END, pl)
+    try:
+        img = Image.open(rp+"cover.jpg")
+
+        # resize the image and apply a high-quality down sampling filter
+        img = img.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        img = ImageTk.PhotoImage(img)
+
+        # create a label
+        panel = Label(win, image=img)
+
+        # set the image as img
+        panel.image = img
+        panel.place(x=35, y=160)
+    except FileNotFoundError:
+        ko = Image.open("Vinyl.jpg")
+
+        # resize the image and apply a high-quality down sampling filter
+        ko = ko.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        ko = ImageTk.PhotoImage(ko)
+
+        # create a label
+        kok = Label(win, image=ko)
+
+        # set the image as img
+        kok.image = ko
+        kok.place(x=35, y=160)
 
 
 def play():
@@ -55,8 +111,9 @@ def pause():
 
 
 def main_play():
+    wer = rp+list1.get(END)
     pygame.mixer.init()
-    pygame.mixer.music.load(w)
+    pygame.mixer.music.load(wer)
     pygame.mixer.music.play()
     Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
     win.update()
@@ -80,17 +137,20 @@ subMenu.add_command(label="Dark", command=dark)
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Help", menu=subMenu)
-subMenu.add_command(label="About Us")
+subMenu.add_command(label="About Us", command=about)
 
 statusbar = Label(win, text="Open an audio file... \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W)
 statusbar.place(x=0, y=280)
 
-scale = Scale(from_=100, to=0, orient=VERTICAL, command=set_vol)
+scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
 scale.set(50)
 pygame.mixer.music.set_volume(0.7)
-scale.place(x=725, y=655)
+scale.place(x=35, y=90)
+
+list1 = Listbox(win, bg="dark grey", fg="black", width=40)
+list1.place(x=210, y=10)
 
 Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
 Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-Button(win, image=p, borderwidth=0).place(x=180, y=20)
+
 win.mainloop()
