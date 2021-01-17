@@ -44,3 +44,9 @@ NOTE - This application is for educational purposes only.
 ![Image 1](Vinyl.jpg)
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume)
+
+# Coming in version 1.1
+
+1 - Swiching between dark and light mode affects all elements
+
+2 - Ability to switch between previously loaded songs
