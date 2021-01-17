@@ -32,7 +32,7 @@ class Popup(Toplevel):
 
 
 def about():
-    Popup("About Music Player", "Powered By Python \n Version 1.1")
+    Popup("About Us", "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own version...")
 
 
 def set_vol(val):
