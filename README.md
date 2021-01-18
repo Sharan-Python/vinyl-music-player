@@ -50,3 +50,4 @@ NOTE - This application is for educational purposes only.
 | Current   | New |
 | ----- | --- |
 | Dark mode does not affect all elements| Dark mode affects all  elements |
+|No previous song or next song functionality| Go to previous song or next song|
