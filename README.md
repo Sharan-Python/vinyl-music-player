@@ -47,6 +47,6 @@ NOTE - This application is for educational purposes only.
 
 # Coming in version 1.1
 
-| foo   | bar |
+| Current   | New |
 | ----- | --- |
-| `a⎮b` | baz |
+| Dark mode does not affect all elements| Dark mode affects all  elements |
