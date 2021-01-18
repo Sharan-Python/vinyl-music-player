@@ -52,3 +52,6 @@ usage for such purposes
 | ----- | --- |
 | Dark mode does not affect all elements| Dark mode affects all  elements |
 |No previous song or next song functionality| Go to previous song or next song|
+
+# Communicate with me
+Use [Discussions to communicate with me]
