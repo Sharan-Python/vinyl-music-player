@@ -47,6 +47,6 @@ NOTE - This application is for educational purposes only.
 
 # Coming in version 1.1
 
-| 1 - Swiching between dark and light mode affects all elements
-
-| 2 - Ability to switch between previously loaded songs
+|1 - Swiching between dark and light mode affects all elements
+|
+|2 - Ability to switch between previously loaded songs
