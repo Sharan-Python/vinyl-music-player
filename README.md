@@ -54,4 +54,4 @@ usage for such purposes
 |No previous song or next song functionality| Go to previous song or next song|
 
 # Communicate with me
-Use [Discussions to communicate with me] = "https://github.com/Sharan-Python/vinyl-music-player/discussions"
+Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussions).
