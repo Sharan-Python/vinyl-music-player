@@ -126,8 +126,7 @@ def main_play():
 
 q = PhotoImage(file="PlayButton.png")
 t = PhotoImage(file="PauseButton.png")
-o = PhotoImage(file="Forward.png")
-p = PhotoImage(file="Rewind.png")
+
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
