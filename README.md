@@ -2,7 +2,7 @@
 This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
 
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
-usage for such purposes
+usage for such purposes.
 
 # Usage -
 
