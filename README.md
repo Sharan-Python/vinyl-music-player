@@ -43,7 +43,7 @@ NOTE - This application is for educational purposes only.
 
 ![Image 1](Vinyl.jpg)
 
-3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume)
+3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
 # Coming in version 1.1
 
