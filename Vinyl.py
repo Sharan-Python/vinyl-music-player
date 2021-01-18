@@ -16,6 +16,7 @@ win.config(menu=menubar)
 pygame.mixer.init()
 
 
+# class for About us
 class Popup(Toplevel):
     def __init__(self, title='', message='', master=None, **kwargs):
         super().__init__(master, **kwargs)
@@ -32,7 +33,8 @@ class Popup(Toplevel):
 
 
 def about():
-    Popup("About Us", "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own version...")
+    Popup("About Us",
+          "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own version...")
 
 
 def set_vol(val):
@@ -68,10 +70,11 @@ def open_():
               anchor=W).place(x=0, y=280)
         list1.insert(END, pl)
     except FileNotFoundError:
-        Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0,
-                                                                                                               y=280)
+        Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+              anchor=W).place(x=0,
+                              y=280)
     try:
-        img = Image.open(rp+"cover.jpg")
+        img = Image.open(rp + "cover.jpg")
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -116,7 +119,7 @@ def pause():
 
 def main_play():
     try:
-        wer = rp+list1.get(END)
+        wer = rp + list1.get(END)
         pygame.mixer.init()
         pygame.mixer.music.load(wer)
         pygame.mixer.music.play()
@@ -124,13 +127,14 @@ def main_play():
         win.update()
         win.update_idletasks()
     except pygame.error or os.error():
-        Label(win, text="Sorry, Vinyl could not read this song. Fancy something else? \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0,
-                                                                                                              y=280)
+        Label(win,
+              text="Sorry, Vinyl could not read this song. Fancy something else? \t \t \t \t \t \t \t \t \t \t \t \t",
+              bd=1, relief=SUNKEN, anchor=W).place(x=0,
+                                                   y=280)
 
 
 q = PhotoImage(file="PlayButton.png")
 t = PhotoImage(file="PauseButton.png")
-
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
