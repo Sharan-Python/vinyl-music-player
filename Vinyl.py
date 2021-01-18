@@ -51,21 +51,25 @@ def white():
 
 
 def open_():
-    global w, img, rp
-    global r
-    global k
-    w = filedialog.askopenfilename()
-    k = TinyTag.get(w)
-    gr = k.title
-    pl = os.path.basename(w)
-    rp = w.strip(pl)
-    win.update()
-    win.update_idletasks()
-    pygame.mixer.init()
-    Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-    Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
-          anchor=W).place(x=0, y=280)
-    list1.insert(END, pl)
+    try:
+        global w, img, rp
+        global r
+        global k
+        w = filedialog.askopenfilename()
+        k = TinyTag.get(w)
+        gr = k.title
+        pl = os.path.basename(w)
+        rp = w.strip(pl)
+        win.update()
+        win.update_idletasks()
+        pygame.mixer.init()
+        Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+        Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+              anchor=W).place(x=0, y=280)
+        list1.insert(END, pl)
+    except FileNotFoundError:
+        Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0,
+                                                                                                               y=280)
     try:
         img = Image.open(rp+"cover.jpg")
 
