@@ -1,7 +1,7 @@
 # Vinyl Music Player
 This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
 
-NOTE - This application is for educational purposes only.
+NOTE - This application is intended to be used in the educational field only.
 
 # Usage -
 
