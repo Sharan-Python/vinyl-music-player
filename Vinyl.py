@@ -69,7 +69,7 @@ def open_():
         Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0, y=280)
         list1.insert(END, pl)
-    except FileNotFoundError:
+    except FileNotFoundError or NameError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
                               y=280)
@@ -88,7 +88,7 @@ def open_():
         # set the image as img
         panel.image = img
         panel.place(x=35, y=160)
-    except FileNotFoundError or NameError:
+    except FileNotFoundError:
         ko = Image.open("Vinyl.jpg")
 
         # resize the image and apply a high-quality down sampling filter
