@@ -42,7 +42,7 @@ usage for such purposes.
 
 2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this...
 
-![Image 1](Vinyl.jpg)
+![Image 1](Vinyl%20Music%20Player%20icon.png)
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
@@ -59,3 +59,5 @@ Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussio
 The images for the buttons- Provided by Ipython08
 
 Volume slider- provided by Ipython08
+
+New Vinyl Music Player- Ipython08
