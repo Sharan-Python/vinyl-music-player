@@ -1,1 +1,1 @@
-Ask to contribute to this repository by asking in discussions :)
+Ask to contribute to this repository by asking in discussions :) .
