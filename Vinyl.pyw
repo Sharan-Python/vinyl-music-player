@@ -89,7 +89,7 @@ def open_():
         panel.image = img
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError:
-        ko = Image.open("Vinyl.jpg")
+        ko = Image.open("Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
