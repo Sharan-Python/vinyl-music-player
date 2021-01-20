@@ -128,7 +128,7 @@ def main_play():
         win.update_idletasks()
     except pygame.error or os.error():
         Label(win,
-              text="Sorry, Vinyl could not read this song. Fancy something else? \t \t \t \t \t \t \t \t \t \t \t \t",
+              text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
                                                    y=280)
 
