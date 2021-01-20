@@ -1,1 +1,1 @@
-Contributing to this repository can be done by creating a pull request.
+Ask to contribute to this repository by asking in discussions :)
