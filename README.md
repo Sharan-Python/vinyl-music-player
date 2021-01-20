@@ -56,8 +56,8 @@ usage for such purposes.
 # Communicate with me
 Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussions) to talk about this repo
 # Credits 
-The images for the buttons- Provided by Ipython08
+icons for the buttons- Provided by Ipython08
 
 Volume slider- provided by Ipython08
 
-New Vinyl Music Player- Ipython08
+New Vinyl Music Player icon- provided by Ipython08
