@@ -69,7 +69,7 @@ def open_():
         Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0, y=280)
         list1.insert(END, pl)
-    except FileNotFoundError or NameError:
+    except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
                               y=280)
@@ -88,7 +88,7 @@ def open_():
         # set the image as img
         panel.image = img
         panel.place(x=35, y=160)
-    except FileNotFoundError or NameError:
+    except FileNotFoundError or NameError or OSError:
         ko = Image.open("Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
@@ -126,7 +126,7 @@ def main_play():
         Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
         win.update()
         win.update_idletasks()
-    except pygame.error or os.error():
+    except pygame.error or OSError:
         Label(win,
               text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
