@@ -55,10 +55,10 @@ def white():
 
 def open_():
     try:
-        rp = ""
         global w, img, rp
         global r
         global k
+        rp = ""
         w = filedialog.askopenfilename()
         k = TinyTag.get(w)
         gr = k.title
