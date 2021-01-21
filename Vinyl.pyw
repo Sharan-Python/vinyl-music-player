@@ -1,3 +1,4 @@
+# TODO:Build exe
 from tkinter import *
 from tkinter import ttk
 import pygame
@@ -54,6 +55,7 @@ def white():
 
 def open_():
     try:
+        rp = ""
         global w, img, rp
         global r
         global k
