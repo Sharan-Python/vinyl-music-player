@@ -61,3 +61,5 @@ icons for the buttons- Provided by Ipython08
 Volume slider- provided by Ipython08
 
 New Vinyl Music Player icon- provided by Ipython08
+
+Compiled by Ipython08
