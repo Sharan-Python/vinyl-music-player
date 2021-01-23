@@ -54,7 +54,7 @@ usage for such purposes.
 |No previous song or next song functionality| Go to previous song or next song|
 
 # Executable version
-Goto https://drive.google.com/drive/folders/1omNEh8-qRapCXo2F2mz4ZWOsH6f8xzds?usp=sharing, make sure third party cookies are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.py
+Goto https://drive.google.com/drive/folders/1omNEh8-qRapCXo2F2mz4ZWOsH6f8xzds?usp=sharing, make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
 
 # Build to executable
 Steps to convert to executable-
