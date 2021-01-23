@@ -46,12 +46,6 @@ usage for such purposes.
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
-# Coming in version 1.1
-
-| Current   | New |
-| ----- | --- |
-| Dark mode does not affect all elements| Dark mode affects all  elements |
-|No previous song or next song functionality| Go to previous song or next song|
 
 # Executable version
 Goto https://drive.google.com/drive/folders/1omNEh8-qRapCXo2F2mz4ZWOsH6f8xzds?usp=sharing, make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
