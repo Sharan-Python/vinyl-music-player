@@ -48,7 +48,7 @@ usage for such purposes.
 
 
 # Executable version
-Goto https://drive.google.com/drive/folders/1omNEh8-qRapCXo2F2mz4ZWOsH6f8xzds?usp=sharing, make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
+Goto [this link](https://drive.google.com/file/d/19aDlEZ0dXFmlA1n2pQvHug5h86BjO2o-/view?usp=sharing), make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
 
 # Build to executable
 Steps to convert to executable-
