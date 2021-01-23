@@ -53,6 +53,16 @@ usage for such purposes.
 | Dark mode does not affect all elements| Dark mode affects all  elements |
 |No previous song or next song functionality| Go to previous song or next song|
 
+# Build to executable
+Steps to convert to executable-
+1- Open Cmd and type `pip install cx_freeze`
+
+2- cd to the downloaded folder and run `python build.py build`
+
+3- Copy the images, namely `Vinyl.jpg` `player.jpg` `PauseButton.png` `PlayButton.png` and put it in build\exe.win-amd64-3.9
+
+4- Run Vinyl.exe
+
 # Communicate with me
 Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussions) to talk about this repo
 # Credits 
