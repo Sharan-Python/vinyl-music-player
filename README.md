@@ -46,12 +46,19 @@ usage for such purposes.
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
-# Coming in version 1.1
 
-| Current   | New |
-| ----- | --- |
-| Dark mode does not affect all elements| Dark mode affects all  elements |
-|No previous song or next song functionality| Go to previous song or next song|
+# Executable version
+Goto [this link](https://drive.google.com/file/d/19aDlEZ0dXFmlA1n2pQvHug5h86BjO2o-/view?usp=sharing), make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
+
+# Build to executable
+Steps to convert to executable-
+1- Open Cmd and type `pip install cx_freeze`
+
+2- cd to the downloaded folder and run `python build.py build` for microsoft store python installations and `py build.py build` for installations downloaded from python.org
+
+3- Copy the images, namely `Vinyl.jpg` `player.jpg` `PauseButton.png` `PlayButton.png` and put it in build\exe.win-amd64-3.9
+
+4- Run Vinyl.exe
 
 # Communicate with me
 Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussions) to talk about this repo
@@ -61,5 +68,3 @@ icons for the buttons- Provided by Ipython08
 Volume slider- provided by Ipython08
 
 New Vinyl Music Player icon- provided by Ipython08
-
-Compiled by Ipython08
