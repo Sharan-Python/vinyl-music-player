@@ -21,7 +21,6 @@ class Popup(Toplevel):
     def __init__(self, title='', message='', master=None, **kwargs):
         super().__init__(master, **kwargs)
         self.title(title)
-
         lbl = Label(self, text=message, font=('bold', 14))
         lbl.pack()
         btn = ttk.Button(self, text="OK", command=self.destroy)
@@ -127,12 +126,11 @@ def main_play():
         Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
         win.update()
         win.update_idletasks()
-    except pygame.error or OSError:
+    except pygame.error or OSError or TypeError:
         Label(win,
               text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
                                                    y=280)
-
 
 q = PhotoImage(file="PlayButton.png")
 t = PhotoImage(file="PauseButton.png")
