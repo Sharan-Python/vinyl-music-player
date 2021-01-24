@@ -120,8 +120,8 @@ def pause():
 
 def main_play():
     try:
-        wer = rp + list1.get(END)
         pygame.mixer.init()
+        wer = rp + list1.get(END)
         pygame.mixer.music.load(wer)
         pygame.mixer.music.play()
         Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
