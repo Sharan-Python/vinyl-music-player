@@ -54,7 +54,7 @@ Goto [this link](https://drive.google.com/file/d/19aDlEZ0dXFmlA1n2pQvHug5h86BjO2
 Steps to convert to executable-
 1- Open Cmd and type `pip install cx_freeze`
 
-2- cd to the downloaded folder and run `python build.py build`
+2- cd to the downloaded folder and run `python build.py build` for microsoft store python installations and `py build.py build` for installations downloaded from python.org
 
 3- Copy the images, namely `Vinyl.jpg` `player.jpg` `PauseButton.png` `PlayButton.png` and put it in build\exe.win-amd64-3.9
 
