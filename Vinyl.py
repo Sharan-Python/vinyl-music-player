@@ -57,6 +57,7 @@ def open_():
         global r
         global k
         rp = ""
+        print(rp)
         w = filedialog.askopenfilename()
         k = TinyTag.get(w)
         gr = k.title
