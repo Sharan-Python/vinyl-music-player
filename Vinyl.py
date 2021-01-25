@@ -33,7 +33,7 @@ class Popup(Toplevel):
 
 def about():
     Popup("About Us",
-          "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own version...")
+          "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own version... to contribute")
 
 
 def set_vol(val):
@@ -132,6 +132,7 @@ def main_play():
               text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
                                                    y=280)
+
 
 q = PhotoImage(file="PlayButton.png")
 t = PhotoImage(file="PauseButton.png")
