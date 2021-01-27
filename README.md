@@ -4,6 +4,8 @@ This is a simple music player made with Python and Tkinter, code is simple and e
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
 usage for such purposes.
 
+NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS ans has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
+
 # Usage -
 
 ## Steps to use - 
