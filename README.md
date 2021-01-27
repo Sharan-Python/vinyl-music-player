@@ -6,6 +6,8 @@ usage for such purposes.
 
 NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS ans has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
 
+NOTE - Any executable file in this repository may be blocked be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm to you/your computer software/your computer hardware.
+
 # Usage -
 
 ## Steps to use - 
