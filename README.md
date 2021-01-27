@@ -4,6 +4,10 @@ This is a simple music player made with Python and Tkinter, code is simple and e
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
 usage for such purposes.
 
+NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS ans has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
+
+NOTE - Any executable file in this repository may be blocked be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm or good to you/your computer software/your computer hardware.
+
 # Usage -
 
 ## Steps to use - 
@@ -47,7 +51,7 @@ usage for such purposes.
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
 # Installer
-The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the installer, used to install the app
+The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer.
 
 # Executable version
 Goto [this link](https://drive.google.com/file/d/19aDlEZ0dXFmlA1n2pQvHug5h86BjO2o-/view?usp=sharing), make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
