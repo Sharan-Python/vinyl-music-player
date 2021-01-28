@@ -10,7 +10,7 @@ NOTE - Any executable file in this repository may be blocked by your OS or by yo
 
 # Profile views -
 <img src="https://profile-counter.glitch.me/sharan-python/count.svg" />
-INVITE YOUR FRIENDS TO VIEW THE REPOSITORY OR I TAKE YOUR DOG
+INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 # Usage -
 
