@@ -156,7 +156,7 @@ statusbar.place(x=0, y=280)
 
 scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
 scale.set(50)
-pygame.mixer.music.set_volume(0.7)
+pygame.mixer.music.set_volume(0.10)
 scale.place(x=35, y=90)
 
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
