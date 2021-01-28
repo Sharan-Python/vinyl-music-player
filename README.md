@@ -10,6 +10,7 @@ NOTE - Any executable file in this repository may be blocked by your OS or by yo
 
 # Profile views -
 <img src="https://profile-counter.glitch.me/sharan-python/count.svg" />
+
 # Usage -
 
 ## Steps to use - 
