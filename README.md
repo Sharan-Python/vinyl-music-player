@@ -9,7 +9,7 @@ NOTE - This application has been tested with successful results with the Windows
 NOTE - Any executable file in this repository may be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm or good to you/your computer software/your computer hardware.
 
 # Profile views -
-<img src="https://profile-counter.glitch.me/sharan-python/count.svg" />
+<img src="https://camo.githubusercontent.com/69977ae9b6a50d8ed4c1043533cb99a87a1ba443024fd9c622abf7b0b18aa545/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f73686172616e2d707974686f6e2f636f756e742e737667" />
 INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 # Usage -
