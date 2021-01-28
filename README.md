@@ -38,7 +38,6 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 5 - On the Music Player window click `File` and then click `Open`.
 
 6 - A file-dialog should come up, choose a mp3, wav or ogg file
-(I have not tested other file formats).
 
 7 - The song name should come up on the listbox, click the play button.
 
