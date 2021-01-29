@@ -127,6 +127,7 @@ def play():
 
 def pause():
     pygame.mixer.music.pause()
+    Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
     win.update()
     win.update_idletasks()
 
