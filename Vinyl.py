@@ -1,3 +1,4 @@
+# TODO: Updte Readme.md
 from tkinter import *
 from tkinter import ttk
 import pygame
@@ -71,7 +72,7 @@ def open_():
               anchor=W).place(x=0,
                               y=280)
     try:
-        img = Image.open("Vinyl Music Player icon.png") # todo make it to display artist image
+        img = Image.open("Vinyl Music Player icon.png")  # todo make it to display artist image
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -110,9 +111,6 @@ def next_():
     print(type(next_one))
     next_one_int = int(next_one)
     print(next_one_int)
-    #kopl = list(next_one)
-    #kopl = kopl[] + 1
-    #print(kopl)
     list1.selection_clear(aa)
     list1.selection_set(next_one_int)
     # Add One To The Current Song Number Tuple/lis
@@ -153,7 +151,6 @@ t = PhotoImage(file="PauseButton.png")
 o = PhotoImage(file="Forward.png")
 p = PhotoImage(file="Rewind.png")
 
-
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
 subMenu.add_command(label="Open", command=open_)
@@ -178,7 +175,5 @@ scale.place(x=35, y=90)
 
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
-
-
 
 win.mainloop()
