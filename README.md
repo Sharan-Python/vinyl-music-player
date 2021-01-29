@@ -48,7 +48,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 1 - Light and dark mode - Click modes and choose Light or Dark
 
-2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this...
+2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this... (This functionality has cuurently be removed will be added soon)
 
 ![Image 1](Vinyl%20Music%20Player%20icon.png)
 
@@ -56,10 +56,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 4- Next button and Previous button- Open a bunch of songs and click the play button now use the next button to go to the next song and vise versa
 # Installer
-The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer.
-
-# Executable version
-Goto [this link](https://drive.google.com/file/d/19aDlEZ0dXFmlA1n2pQvHug5h86BjO2o-/view?usp=sharing), make sure third party cookies and all cookies are enabled are enabled for google drive and download it, in build\exe.win-amd64-3.9 run Vinyl.exe
+The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer. Note that this installer will only be updated when major changes are made, minor changes to the player will not result in an update to the installer
 
 # Build to executable
 Steps to convert to executable-
