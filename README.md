@@ -48,7 +48,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 1 - Light and dark mode - Click modes and choose Light or Dark
 
-2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this... (This functionality has cuurently be removed will be added soon)
+2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this... 
 
 ![Image 1](Vinyl%20Music%20Player%20icon.png)
 
