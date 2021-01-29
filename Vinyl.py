@@ -3,7 +3,9 @@ from tkinter import ttk
 import pygame
 from tkinter import filedialog
 from PIL import ImageTk, Image
+from tinytag import TinyTag
 import os
+
 win = Tk()
 win.geometry("500x300")
 win.resizable(width=False, height=False)
@@ -55,7 +57,7 @@ def open_():
         global r
         global k
         global ll, pp
-        w = filedialog.askopenfilename()
+        w = filedialog.askopenfilename(initialdir='', title="Choose A Song", filetypes=(("mp3 Files", "*.mp3"), ))
         # ll = os.listdir(w)
         list1.insert(END, w)
         if str(w).endswith('.mp3'):
@@ -65,12 +67,15 @@ def open_():
             Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
             Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
             list1.selection_set(END)
+            tag = TinyTag.get(w)
+            Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+                  anchor=W).place(x=0, y=280)
     except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
                               y=280)
     try:
-        img = Image.open(w.strip(os.path.basename(w)) + "cover.jpg")  # todo make it to display artist image
+        img = Image.open(w.strip(os.path.basename(w)) + "cover.jpg")
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -132,6 +137,7 @@ def prev_():
     except pygame.error or IndexError:
         pass
 
+
 def play():
     pygame.mixer.music.unpause()
     win.update()
@@ -153,6 +159,7 @@ def main_play():
         list1.selection_set(0)
         pygame.mixer.music.play()
         Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
+
     except pygame.error or OSError or TypeError:
         Label(win,
               text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
@@ -181,7 +188,9 @@ subMenu.add_command(label="About Us", command=about)
 
 statusbar = Label(win, text="Open an audio file... \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W)
 statusbar.place(x=0, y=280)
-
+statusbar = Label(win, text="Open an audio filfde... \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+                  anchor=W)
+statusbar.place(x=0, y=280)
 scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
 scale.set(50)
 pygame.mixer.music.set_volume(0.10)
