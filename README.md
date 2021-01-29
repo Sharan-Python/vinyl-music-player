@@ -36,9 +36,9 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 ![Image 1](player.jpg)
 
-5 - On the Music Player window click `File` and then click `Open`.
+5 - On the Music Player window click `File` and then click `Open a song` or `Open a folder`.
 
-6 - A file-dialog should come up, choose a `.mp3` file
+6 - A file-dialog should come up, choose a `.mp3` file or a foder
 
 7 - The song name should come up on the listbox, click the play button.
 

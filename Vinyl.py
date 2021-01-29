@@ -114,7 +114,6 @@ def open_fol():
         global ll, pp
         w = filedialog.askdirectory()
         list_dir_os = os.listdir(w)
-        print(list_dir_os)
         for item in list_dir_os:
             list1.insert(END, w + "/" + item)
         if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
@@ -247,9 +246,7 @@ subMenu.add_command(label="About Us", command=about)
 
 statusbar = Label(win, text="Open an audio file... \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W)
 statusbar.place(x=0, y=280)
-statusbar = Label(win, text="Open an audio filfde... \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
-                  anchor=W)
-statusbar.place(x=0, y=280)
+
 scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
 scale.set(50)
 pygame.mixer.music.set_volume(0.10)
