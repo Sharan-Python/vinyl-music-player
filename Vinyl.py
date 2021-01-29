@@ -64,6 +64,7 @@ def open_():
             Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
             Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
             Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+            list1.selection_set(END)
     except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
@@ -101,35 +102,35 @@ def open_():
 
 
 def next_():
-    currsel = list1.curselection()
-    aa = int(currsel[0])
-    print(aa)
-    next_one = aa + 1
-    print(type(next_one))
-    next_one_int = int(next_one)
-    print(next_one_int)
-    list1.selection_clear(aa)
-    list1.selection_set(next_one_int)
-    pygame.mixer.init()
-    pygame.mixer.music.load(list1.get(next_one_int))
-    pygame.mixer.music.play()
+    try:
+        currsel = list1.curselection()
+        aa = int(currsel[0])
+        next_one = aa + 1
+        next_one_int = int(next_one)
+        list1.selection_clear(aa)
+        list1.selection_set(next_one_int)
+        pygame.mixer.init()
+        pygame.mixer.music.load(list1.get(next_one_int))
+        pygame.mixer.music.play()
+    except pygame.error or IndexError:
+        pass
 
 
 def prev_():
-    currsel = list1.curselection()
-    aa = int(currsel[0])
-    print(aa)
-    next_one = aa - 1
-    print(type(next_one))
-    next_one_int = int(next_one)
-    print(next_one_int)
-    list1.selection_clear(aa)
-    list1.selection_set(next_one_int)
-    # Add One To The Current Song Number Tuple/lis
-    pygame.mixer.init()
-    pygame.mixer.music.load(list1.get(next_one_int))
-    pygame.mixer.music.play()
-
+    try:
+        currsel = list1.curselection()
+        aa = int(currsel[0])
+        next_one = aa - 1
+        (type(next_one))
+        next_one_int = int(next_one)
+        list1.selection_clear(aa)
+        list1.selection_set(next_one_int)
+        # Add One To The Current Song Number Tuple/lis
+        pygame.mixer.init()
+        pygame.mixer.music.load(list1.get(next_one_int))
+        pygame.mixer.music.play()
+    except pygame.error or IndexError:
+        pass
 
 def play():
     pygame.mixer.music.unpause()
