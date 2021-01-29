@@ -10,6 +10,7 @@ NOTE - Any executable file in this repository may be blocked by your OS or by yo
 
 # Profile views -
 <img src="https://camo.githubusercontent.com/69977ae9b6a50d8ed4c1043533cb99a87a1ba443024fd9c622abf7b0b18aa545/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f73686172616e2d707974686f6e2f636f756e742e737667" />
+
 INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 # Usage -
@@ -53,7 +54,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
-4- Next button- Open a bunch of songs and click the play button now use the next button to go to the next song (Previous song functionality coming soon)
+4- Next button and Previous button- Open a bunch of songs and click the play button now use the next button to go to the next song and vise versa
 # Installer
 The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer.
 

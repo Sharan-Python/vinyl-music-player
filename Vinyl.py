@@ -1,12 +1,9 @@
-# TODO: Updte Readme.md
 from tkinter import *
 from tkinter import ttk
 import pygame
 from tkinter import filedialog
-import os
-from tinytag import TinyTag
 from PIL import ImageTk, Image
-
+import os
 win = Tk()
 win.geometry("500x300")
 win.resizable(width=False, height=False)
@@ -66,13 +63,13 @@ def open_():
             Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
             Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
             Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-            # Button(win, image=o, borderwidth=0, command=next_).place(x=100, y=20) # todo make prev song functionality
+            Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
     except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
                               y=280)
     try:
-        img = Image.open("Vinyl Music Player icon.png")  # todo make it to display artist image
+        img = Image.open(w.strip(os.path.basename(w)) + "cover.jpg")  # todo make it to display artist image
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -108,6 +105,21 @@ def next_():
     aa = int(currsel[0])
     print(aa)
     next_one = aa + 1
+    print(type(next_one))
+    next_one_int = int(next_one)
+    print(next_one_int)
+    list1.selection_clear(aa)
+    list1.selection_set(next_one_int)
+    pygame.mixer.init()
+    pygame.mixer.music.load(list1.get(next_one_int))
+    pygame.mixer.music.play()
+
+
+def prev_():
+    currsel = list1.curselection()
+    aa = int(currsel[0])
+    print(aa)
+    next_one = aa - 1
     print(type(next_one))
     next_one_int = int(next_one)
     print(next_one_int)
