@@ -80,4 +80,4 @@ New Vinyl Music Player icon- provided by Ipython08
 
 # Go to [this link]
 
-(https://github.com/Sharan-Python/vinyl-music-player/wiki)to see the current status on the project and upcoming versions
+(https://github.com/Sharan-Python/vinyl-music-player/wiki) to see the current status on the project and upcoming versions
