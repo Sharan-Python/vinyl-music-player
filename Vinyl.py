@@ -56,26 +56,22 @@ def open_():
         global w, img, rp
         global r
         global k
-        rp = ""
-        print(rp)
+        global ll, pp
         w = filedialog.askopenfilename()
-        k = TinyTag.get(w)
-        gr = k.title
-        pl = os.path.basename(w)
-        rp = w.strip(pl)
-        win.update()
-        win.update_idletasks()
-        pygame.mixer.init()
-        Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-        Label(win, text=gr + "\t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
-              anchor=W).place(x=0, y=280)
-        list1.insert(END, pl)
+        # ll = os.listdir(w)
+        list1.insert(END, w)
+        if str(w).endswith('.mp3'):
+            pygame.mixer.init()
+            Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+            Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+            Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+            # Button(win, image=o, borderwidth=0, command=next_).place(x=100, y=20) # todo make prev song functionality
     except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
               anchor=W).place(x=0,
                               y=280)
     try:
-        img = Image.open(rp + "cover.jpg")
+        img = Image.open("Vinyl Music Player icon.png") # todo make it to display artist image
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -106,6 +102,25 @@ def open_():
         kok.place(x=35, y=160)
 
 
+def next_():
+    currsel = list1.curselection()
+    aa = int(currsel[0])
+    print(aa)
+    next_one = aa + 1
+    print(type(next_one))
+    next_one_int = int(next_one)
+    print(next_one_int)
+    #kopl = list(next_one)
+    #kopl = kopl[] + 1
+    #print(kopl)
+    list1.selection_clear(aa)
+    list1.selection_set(next_one_int)
+    # Add One To The Current Song Number Tuple/lis
+    pygame.mixer.init()
+    pygame.mixer.music.load(list1.get(next_one_int))
+    pygame.mixer.music.play()
+
+
 def play():
     pygame.mixer.music.unpause()
     win.update()
@@ -120,13 +135,12 @@ def pause():
 
 def main_play():
     try:
+        global lpp
         pygame.mixer.init()
-        wer = rp + list1.get(END)
-        pygame.mixer.music.load(wer)
+        pygame.mixer.music.load(list1.get(0))
+        list1.selection_set(0)
         pygame.mixer.music.play()
         Button(win, image=q, borderwidth=0, command=play).place(x=20, y=20)
-        win.update()
-        win.update_idletasks()
     except pygame.error or OSError or TypeError:
         Label(win,
               text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
@@ -136,6 +150,9 @@ def main_play():
 
 q = PhotoImage(file="PlayButton.png")
 t = PhotoImage(file="PauseButton.png")
+o = PhotoImage(file="Forward.png")
+p = PhotoImage(file="Rewind.png")
+
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
@@ -162,7 +179,6 @@ scale.place(x=35, y=90)
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
 
-Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+
 
 win.mainloop()
