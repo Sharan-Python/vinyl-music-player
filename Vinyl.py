@@ -57,7 +57,7 @@ def open_():
         global r
         global k
         global ll, pp
-        w = filedialog.askopenfilename(initialdir='', title="Choose A Song", filetypes=(("mp3 Files", "*.mp3"), ))
+        w = filedialog.askopenfilename(initialdir='', title="Choose A Song", filetypes=(("mp3 Files", "*.mp3"),))
         # ll = os.listdir(w)
         list1.insert(END, w)
         if str(w).endswith('.mp3'):
@@ -76,6 +76,64 @@ def open_():
                               y=280)
     try:
         img = Image.open(w.strip(os.path.basename(w)) + "cover.jpg")
+
+        # resize the image and apply a high-quality down sampling filter
+        img = img.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        img = ImageTk.PhotoImage(img)
+
+        # create a label
+        panel = Label(win, image=img)
+
+        # set the image as img
+        panel.image = img
+        panel.place(x=35, y=160)
+    except FileNotFoundError or NameError or OSError:
+        ko = Image.open("Vinyl Music Player icon.png")
+
+        # resize the image and apply a high-quality down sampling filter
+        ko = ko.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        ko = ImageTk.PhotoImage(ko)
+
+        # create a label
+        kok = Label(win, image=ko)
+
+        # set the image as img
+        kok.image = ko
+        kok.place(x=35, y=160)
+
+
+def open_fol():
+    try:
+        global w, img, rp
+        global r
+        global k
+        global ll, pp
+        w = filedialog.askdirectory()
+        list_dir_os = os.listdir(w)
+        print(list_dir_os)
+        for item in list_dir_os:
+            list1.insert(END, w + "/" + item)
+        if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
+            pygame.mixer.init()
+            Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+            Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+            Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+            Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+            list1.selection_set(END)
+            Label(win, text="Opened dir \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+                  anchor=W).place(x=0, y=280)
+    except FileNotFoundError or NameError or OSError:
+        Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+              anchor=W).place(x=0,
+                              y=280)
+    try:
+        ima = w + "/" + "cover.jpg"
+        print(ima)
+        img = Image.open(ima)
 
         # resize the image and apply a high-quality down sampling filter
         img = img.resize((110, 110), Image.ANTIALIAS)
@@ -174,7 +232,8 @@ p = PhotoImage(file="Rewind.png")
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
-subMenu.add_command(label="Open", command=open_)
+subMenu.add_command(label="Open 1 Song", command=open_)
+subMenu.add_command(label="Open a folder", command=open_fol)
 subMenu.add_command(label="Exit", command=win.destroy)
 
 subMenu = Menu(menubar, tearoff=0)
