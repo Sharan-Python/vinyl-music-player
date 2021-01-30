@@ -1,4 +1,4 @@
-# This is Ipython08's branch for his testing. This branch does not contain any official releases. Contains Only experimental files :)
+# This is Ipython08's branch for his testing. This branch does not contain any official releases. Contains Only experimental files :) .
 
 # Vinyl Music Player
 This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
