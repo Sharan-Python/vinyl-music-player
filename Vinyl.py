@@ -51,6 +51,15 @@ def white():
     Label(win, text="Light mode \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0, y=280)
 
 
+def delete():
+    cursel = list1.curselection()
+    list1.delete(cursel[0])
+
+
+def delete_all():
+    list1.delete(0, END)
+
+
 def open_():
     try:
         global w, img, rp
@@ -63,9 +72,9 @@ def open_():
         if str(w).endswith('.mp3'):
             pygame.mixer.init()
             Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-            Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+            Button(win, image=o, borderwidth=0, command=next_).place(x=340, y=200)
             Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-            Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+            Button(win, image=p, borderwidth=0, command=prev_).place(x=260, y=200)
             list1.selection_set(END)
             tag = TinyTag.get(w)
             Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
@@ -241,6 +250,11 @@ subMenu.add_command(label="Light", command=white)
 subMenu.add_command(label="Dark", command=dark)
 
 subMenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="Delete", menu=subMenu)
+subMenu.add_command(label="Delete a song", command=delete)
+subMenu.add_command(label="Delete all songs", command=delete_all)
+
+subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Help", menu=subMenu)
 subMenu.add_command(label="About Us", command=about)
 
@@ -254,5 +268,6 @@ scale.place(x=35, y=90)
 
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
+
 
 win.mainloop()
