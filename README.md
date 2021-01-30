@@ -1,3 +1,5 @@
+
+
 # Vinyl Music Player
 This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
 
