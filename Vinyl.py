@@ -269,5 +269,4 @@ scale.place(x=35, y=90)
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
 
-
 win.mainloop()
