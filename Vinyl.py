@@ -140,7 +140,6 @@ def open_fol():
                               y=280)
     try:
         ima = w + "/" + "cover.jpg"
-        print(ima)
         img = Image.open(ima)
 
         # resize the image and apply a high-quality down sampling filter
@@ -183,6 +182,9 @@ def next_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
+        tag = TinyTag.get(list1.get(next_one_int))
+        Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
+              anchor=W).place(x=0, y=280)
     except pygame.error or IndexError:
         pass
 
@@ -200,12 +202,20 @@ def prev_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
+        tag = TinyTag.get(list1.get(next_one_int))
+        Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
+              anchor=W).place(x=0, y=280)
     except pygame.error or IndexError:
         pass
 
 
 def play():
     pygame.mixer.music.unpause()
+    currsel = list1.curselection()
+    currsel_1 = list1.get(int(currsel[0]))
+    tag = TinyTag.get(currsel_1)
+    Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
+          anchor=W).place(x=0, y=280)
     win.update()
     win.update_idletasks()
 
