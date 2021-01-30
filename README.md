@@ -55,6 +55,8 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
 4- Next button and Previous button- Open a bunch of songs and click the play button now use the next button to go to the next song and vise versa
+
+5- Delete song functionlity- use the delete cascade to delete one selected song or to delete all songs
 # Installer
 The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer. Note that this installer will only be updated when major changes are made, minor changes to the player will not result in an update to the installer
 
