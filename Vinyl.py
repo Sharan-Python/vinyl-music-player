@@ -74,9 +74,9 @@ def open_():
         if str(w).endswith('.mp3'):
             pygame.mixer.init()
             Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-            Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+            Button(win, image=o, borderwidth=0, command=next_).place(x=340, y=200)
             Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-            Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+            Button(win, image=p, borderwidth=0, command=prev_).place(x=260, y=200)
             list1.selection_set(END)
             tag = TinyTag.get(w)
             Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
@@ -240,8 +240,7 @@ def main_play():
 
     except pygame.error or OSError or TypeError:
         Label(win,
-              text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t "
-                   "\t \t",
+              text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
                                                    y=280)
 

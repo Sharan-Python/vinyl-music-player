@@ -40,7 +40,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 
 5 - On the Music Player window click `File` and then click `Open a song` or `Open a folder`(When opening a folder make sure that the first song is a mp3 file)
 
-6 - A file-dialog should come up, choose a `.mp3` file or a foder
+6 - A file-dialog should come up, choose a `.mp3` file or a folder
 
 7 - The song name should come up on the listbox, click the play button.
 
@@ -84,5 +84,3 @@ New Vinyl Music Player icon- provided by Ipython08
 # Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
-# Alternative link for the repository
-If you are having issues with Github click [this link](https://bitbucket.org/Ipython08/vinyl_music_player/src/main/) to view the repository in Bitbucket.
