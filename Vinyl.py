@@ -6,6 +6,8 @@ from PIL import ImageTk, Image
 from tinytag import TinyTag
 import os
 
+# not complete stuff doesn't work yet.......
+
 win = Tk()
 win.geometry("500x300")
 win.resizable(width=False, height=False)
@@ -31,6 +33,13 @@ class Popup(Toplevel):
         self.master.wait_window(self)
 
 
+def buttons(q, t, o, p):
+    Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+    Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+    Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+    Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+
+
 def about():
     Popup("About Us",
           "Powered By Python \n Version 1.0 \n Problems? Feel free to create an issue on Github \n Do fork your own "
@@ -43,11 +52,25 @@ def set_vol(val):
 
 
 def dark():
+    q = PhotoImage(file="PlayButton - Dark mode.png")
+    t = PhotoImage(file="PauseButton - Dark mode.png")
+    o = PhotoImage(file="Forward- dark mode.png")
+    p = PhotoImage(file="Rewind - Dark mode.png")
+    buttons()
     win["bg"] = "Black"
     Label(win, text="Dark Mode \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0, y=280)
 
 
 def white():
+    q = PhotoImage(file="PlayButton.png")
+    t = PhotoImage(file="PauseButton.png")
+    o = PhotoImage(file="Forward.png")
+    p = PhotoImage(file="Rewind.png")
+    Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+    Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+    Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+    Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+    buttons(q, t, o, p)
     win["bg"] = "White"
     Label(win, text="Light mode \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN, anchor=W).place(x=0, y=280)
 
