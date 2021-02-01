@@ -84,5 +84,3 @@ New Vinyl Music Player icon- provided by Ipython08
 # Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
-# Alternative link for the repository
-If you are having issues with Github click [this link](https://bitbucket.org/Ipython08/vinyl_music_player/src/main/) to view the repository in Bitbucket.
