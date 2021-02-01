@@ -77,9 +77,9 @@ Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussio
 # Credits 
 icons for the buttons- Provided by Ipython08
 
-Volume slider- provided by Ipython08
-
 New Vinyl Music Player icon- provided by Ipython08
+
+Volume slider, some other stuff and bug fixes :)- provided by Ipython08
 
 # Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
