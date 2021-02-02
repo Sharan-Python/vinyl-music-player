@@ -1,4 +1,4 @@
-# Todo: Nothing
+# Dont overwrite the status bar
 from tkinter import *
 from tkinter import ttk
 import pygame
@@ -68,15 +68,14 @@ def open_():
         global r
         global k
         global ll, pp
-        w = filedialog.askopenfilename(initialdir='', title="Choose A Song", filetypes=(("mp3 Files", "*.mp3"),))
+        w = filedialog.askopenfilename(initialdir='', title="Choose A Song", filetypes=(("Music Files", "*.mp3 *.wav "
+                                                                                                        "*.ogg *.mx "
+                                                                                                        "*.mod"),))
         # ll = os.listdir(w)
-        list1.insert(END, w)
+        if w != "":
+            list1.insert(END, w)
         if str(w).endswith('.mp3'):
             pygame.mixer.init()
-            Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-            Button(win, image=o, borderwidth=0, command=next_).place(x=340, y=200)
-            Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-            Button(win, image=p, borderwidth=0, command=prev_).place(x=260, y=200)
             list1.selection_set(END)
             tag = TinyTag.get(w)
             Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
@@ -129,12 +128,8 @@ def open_fol():
             list1.insert(END, w + "/" + item)
         if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
             pygame.mixer.init()
-            Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-            Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
-            Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-            Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
             list1.selection_set(END)
-            Label(win, text="Opened dir \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
+            Label(win, text="Opened the Music directory \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
                   anchor=W).place(x=0, y=280)
     except FileNotFoundError or NameError or OSError:
         Label(win, text="You didn't choose a file \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
@@ -142,6 +137,7 @@ def open_fol():
                               y=280)
     try:
         ima = w + "/" + "cover.jpg"
+        print(ima)
         img = Image.open(ima)
 
         # resize the image and apply a high-quality down sampling filter
@@ -184,9 +180,6 @@ def next_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        tag = TinyTag.get(list1.get(next_one_int))
-        Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
-              anchor=W).place(x=0, y=280)
     except pygame.error or IndexError:
         pass
 
@@ -204,20 +197,12 @@ def prev_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        tag = TinyTag.get(list1.get(next_one_int))
-        Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
-              anchor=W).place(x=0, y=280)
     except pygame.error or IndexError:
         pass
 
 
 def play():
     pygame.mixer.music.unpause()
-    currsel = list1.curselection()
-    currsel_1 = list1.get(int(currsel[0]))
-    tag = TinyTag.get(currsel_1)
-    Label(win, text="Now playing " + tag.title + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", bd=1, relief=SUNKEN,
-          anchor=W).place(x=0, y=280)
     win.update()
     win.update_idletasks()
 
@@ -240,7 +225,8 @@ def main_play():
 
     except pygame.error or OSError or TypeError:
         Label(win,
-              text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t \t \t",
+              text="Sorry, Vinyl could not read this song. Try playing some other song? \t \t \t \t \t \t \t \t \t \t "
+                   "\t \t",
               bd=1, relief=SUNKEN, anchor=W).place(x=0,
                                                    y=280)
 
@@ -252,8 +238,8 @@ p = PhotoImage(file="Rewind.png")
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
-subMenu.add_command(label="Open 1 Song", command=open_)
-subMenu.add_command(label="Open a folder", command=open_fol)
+subMenu.add_command(label="Open a Song", command=open_)
+subMenu.add_command(label="Open a Music folder", command=open_fol)
 subMenu.add_command(label="Exit", command=win.destroy)
 
 subMenu = Menu(menubar, tearoff=0)
@@ -277,6 +263,11 @@ scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
 scale.set(50)
 pygame.mixer.music.set_volume(0.10)
 scale.place(x=35, y=90)
+
+Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
 
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
