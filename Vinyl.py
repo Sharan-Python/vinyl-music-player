@@ -1,4 +1,3 @@
-# Dont overwrite the status bar
 from tkinter import *
 from tkinter import ttk
 import pygame
