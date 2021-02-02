@@ -81,6 +81,37 @@ def open_last_inst():
             status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or IndexError:
         pass
+    try:
+        ima = var + "/" + "cover.jpg"
+        imgp = Image.open(ima)
+
+        # resize the image and apply a high-quality down sampling filter
+        imgp = imgp.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        imgp = ImageTk.PhotoImage(imgp)
+
+        # create a label
+        panel = Label(win, image=imgp)
+
+        # set the image as img
+        panel.image = imgp
+        panel.place(x=35, y=160)
+    except FileNotFoundError or NameError or OSError:
+        ko = Image.open("Vinyl Music Player icon.png")
+
+        # resize the image and apply a high-quality down sampling filter
+        ko = ko.resize((110, 110), Image.ANTIALIAS)
+
+        # PhotoImage class is used to add image to widgets, icons etc
+        ko = ImageTk.PhotoImage(ko)
+
+        # create a label
+        kok = Label(win, image=ko)
+
+        # set the image as img
+        kok.image = ko
+        kok.place(x=35, y=160)
 
 
 def open_():
