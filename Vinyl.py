@@ -1,4 +1,3 @@
-# Dont overwrite the status bar
 from tkinter import *
 from tkinter import ttk
 import pygame
@@ -6,6 +5,7 @@ from tkinter import filedialog
 from PIL import ImageTk, Image
 from tinytag import TinyTag
 import os
+
 
 win = Tk()
 win.geometry("500x300")
