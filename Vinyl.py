@@ -67,6 +67,22 @@ def delete_all():
     status(status_="Deleted all \t\t\t\t\t\t\t\t\t\t\t\t")
 
 
+def open_last_inst():
+    try:
+        pope = open("DUMP.txt", "r")
+        rope = pope.readlines()
+        var = rope[-1]
+        list_dir_os = os.listdir(var)
+        for item in list_dir_os:
+            list1.insert(END, var + "/" + item)
+        if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
+            pygame.mixer.init()
+            list1.selection_set(END)
+            status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
+    except FileNotFoundError or IndexError:
+        pass
+
+
 def open_():
     try:
         global w, img, rp
@@ -126,6 +142,8 @@ def open_fol():
         global k
         global ll, pp
         w = filedialog.askdirectory()
+        pope = open("DUMP.txt", "w")
+        pope.write(w)
         list_dir_os = os.listdir(w)
         for item in list_dir_os:
             list1.insert(END, w + "/" + item)
@@ -273,4 +291,5 @@ Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
 list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
 
+open_last_inst()
 win.mainloop()
