@@ -1,1 +1,1 @@
-Ask to contribute to this repository by asking in discussions :) .
+Fork your own version and create a pull request
