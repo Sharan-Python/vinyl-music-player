@@ -59,6 +59,8 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
 4- Next button and Previous button- Open a bunch of songs and click the play button now use the next button to go to the next song and vise versa
 
 5- Delete song functionlity- use the delete cascade to delete one selected song or to delete all songs
+
+6- Opens the folder you opened last time- If you ran the player and opened a folder, it will open the same folder on next startup automatically
 # Installer
 The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer. Note that this installer will only be updated when major changes are made, minor changes to the player will not result in an update to the installer
 
