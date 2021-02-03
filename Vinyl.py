@@ -78,7 +78,7 @@ def open_last_inst():
         if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
             pygame.mixer.init()
             list1.selection_set(END)
-            status(status_="Opened a Music directory from previous opened folder\t\t\t\t\t\t\t\t\t\t\t\t")
+            status(status_="Opened a Music directory from previously opened folder\t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or IndexError:
         pass
     try:
@@ -186,7 +186,6 @@ def open_fol():
         status(status_="Open a file/folder \t\t\t\t\t\t\t\t\t\t\t\t")
     try:
         ima = w + "/" + "cover.jpg"
-        print(ima)
         img = Image.open(ima)
 
         # resize the image and apply a high-quality down sampling filter
@@ -229,6 +228,8 @@ def next_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
+        base = os.path.basename(list1.get(next_one_int))
+        status(status_=base + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -246,6 +247,8 @@ def prev_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
+        base = os.path.basename(list1.get(next_one_int))
+        status(status_=base + "\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
