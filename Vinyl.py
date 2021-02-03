@@ -131,8 +131,7 @@ def open_():
             pygame.mixer.init()
             list1.selection_set(END)
             tag = TinyTag.get(w)
-            Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
-                  anchor=W).place(x=0, y=280)
+            status(status_=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t")
     except FileNotFoundError or NameError or OSError:
         status(status_="You didn't choose a file \t\t\t\t\t\t\t\t\t\t\t\t")
     try:
@@ -229,8 +228,8 @@ def next_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        base = os.path.basename(list1.get(next_one_int))
-        status(status_=base + "\t\t\t\t\t\t\t\t\t\t\t")
+        tag = TinyTag.get(list1.get(next_one_int))
+        status(status_=tag.title + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -248,8 +247,8 @@ def prev_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        base = os.path.basename(list1.get(next_one_int))
-        status(status_=base + "\t\t\t\t\t\t")
+        tag = TinyTag.get(list1.get(next_one_int))
+        status(status_=tag.title + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
