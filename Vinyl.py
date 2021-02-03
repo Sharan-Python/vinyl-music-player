@@ -15,7 +15,7 @@ win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
 pygame.mixer.init()
-
+win.iconbitmap("Vinyl Music Player icon.ico")
 
 # class for About us
 class Popup(Toplevel):
