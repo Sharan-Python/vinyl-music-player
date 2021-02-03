@@ -78,7 +78,7 @@ def open_last_inst():
         if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
             pygame.mixer.init()
             list1.selection_set(END)
-            status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
+            status(status_="Opened a Music directory from previous opened folder\t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or IndexError:
         pass
     try:
