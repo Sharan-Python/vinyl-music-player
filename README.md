@@ -3,17 +3,12 @@
 # Vinyl Music Player
 This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
 
-NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
-usage for such purposes.
-
-NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS and has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
-
-NOTE - Any executable file in this repository may be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm or good to you/your computer software/your computer hardware.
+Play your favorite songs with ease
 
 # Profile views -
 <img src="https://camo.githubusercontent.com/69977ae9b6a50d8ed4c1043533cb99a87a1ba443024fd9c622abf7b0b18aa545/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f73686172616e2d707974686f6e2f636f756e742e737667" />
 
-INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I TAKE YOUR DOG
+INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
 
 # Usage -
 
@@ -86,3 +81,9 @@ Volume slider, some other stuff and bug fixes :)- provided by Ipython08
 # Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
+NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
+usage for such purposes.
+
+NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS and has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
+
+NOTE - Any executable file in this repository may be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm or good to you/your computer software/your computer hardware.
