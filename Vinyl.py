@@ -15,7 +15,7 @@ win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
 pygame.mixer.init()
-win.iconbitmap("Vinyl Music Player icon.ico")
+win.iconbitmap("Images/Vinyl Music Player icon.ico")
 
 
 # class for About us
@@ -278,10 +278,10 @@ def main_play():
         status(status_="Sorry, Vinyl could not read this song \t\t\t\t\t\t\t\t\t\t\t\t")
 
 
-q = PhotoImage(file="PlayButton.png")
-t = PhotoImage(file="PauseButton.png")
-o = PhotoImage(file="Forward.png")
-p = PhotoImage(file="Rewind.png")
+q = PhotoImage(file="Images/PlayButton.png")
+t = PhotoImage(file="Images/PauseButton.png")
+o = PhotoImage(file="Images/Forward.png")
+p = PhotoImage(file="Images/Rewind.png")
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
