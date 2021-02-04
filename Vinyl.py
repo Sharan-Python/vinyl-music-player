@@ -229,7 +229,7 @@ def next_():
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
         tag = TinyTag.get(list1.get(next_one_int))
-        status(status_=tag.title + "\t\t\t\t\t\t\t\t\t\t\t")
+        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -239,7 +239,6 @@ def prev_():
         currsel = list1.curselection()
         aa = int(currsel[0])
         next_one = aa - 1
-        (type(next_one))
         next_one_int = int(next_one)
         list1.selection_clear(aa)
         list1.selection_set(next_one_int)
@@ -248,7 +247,7 @@ def prev_():
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
         tag = TinyTag.get(list1.get(next_one_int))
-        status(status_=tag.title + "\t\t\t\t\t\t\t\t\t\t\t")
+        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -326,4 +325,6 @@ list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
 
 open_last_inst()
+
+
 win.mainloop()
