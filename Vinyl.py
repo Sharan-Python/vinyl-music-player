@@ -99,7 +99,7 @@ def open_last_inst():
         panel.image = imgp
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
@@ -150,7 +150,7 @@ def open_():
         panel.image = img
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
@@ -201,7 +201,7 @@ def open_fol():
         panel.image = img
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
