@@ -35,7 +35,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
 
 5 - On the Music Player window click `File` and then click `Open a song` or `Open a folder`(When opening a folder make sure that the first song is a mp3 file)
 
-6 - A file-dialog should come up, choose a `.mp3` file or a folder
+6 - A file-dialog should come up, choose a `.mp3`, `.mx`, `.mod` or a `.wav` file or a folder
 
 7 - The song name should come up on the listbox, click the play button.
 
