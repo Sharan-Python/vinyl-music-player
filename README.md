@@ -31,7 +31,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
 4 - After the music player screen appears it should look something like this...
 
 
-![Image 1](player.jpg)
+![Image 1](Images/player.jpg)
 
 5 - On the Music Player window click `File` and then click `Open a song` or `Open a folder`(When opening a folder make sure that the first song is a mp3 file)
 
@@ -47,7 +47,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
 
 2 - Shows picture of artist - If a file called `cover.jpg` is available in the same folder as your song it will display that image after opening the song, intended to display a picture of the artist who made the songs in the folder. If `cover.jpg` is not available then it will display this... 
 
-![Image 1](Vinyl%20Music%20Player%20icon.png)
+![Image 1](Images/Vinyl%20Music%20Player%20icon.png)
 
 3 - Volume slider - Allows you to change the volume of the song being played. (Note that the volume changed in the app is relative to system volume, so if system volume is 50% and app volume is 100% the volume of the sound being played is 100% of 50)
 
@@ -81,6 +81,7 @@ Volume slider, some other stuff and bug fixes :)- provided by Ipython08
 # Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
+# Important info
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
 usage for such purposes.
 
