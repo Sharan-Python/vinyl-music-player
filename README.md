@@ -59,6 +59,7 @@ INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
 # Installer
 The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer. Note that this installer will only be updated when major changes are made, minor changes to the player will not result in an update to the installer
 
+7- Favorite folder option - Under the Favorites sub-menu you can add a favorite folder and then click it anytime to open that folder you chose
 # Build to executable
 Steps to convert to executable-
 1- Open Cmd and type `pip install cx_freeze`
