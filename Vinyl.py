@@ -15,7 +15,6 @@ win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
 pygame.mixer.init()
-win.iconbitmap("Images/Vinyl Music Player icon.ico")
 
 
 # class for About us
@@ -66,6 +65,23 @@ def delete():
 def delete_all():
     list1.delete(0, END)
     status(status_="Deleted all \t\t\t\t\t\t\t\t\t\t\t\t")
+
+
+def fav_fol():
+    fol_open_fav = filedialog.askdirectory()
+    fav = open("fav.txt", "w")
+    fav.write(fol_open_fav)
+    fav.close()
+
+
+def fav_fol_open():
+    list1.delete(0, END)
+    jk = open("Fav.txt", "r")
+    kj = jk.readlines()
+    vari = kj[-1]
+    list_dir_osd = os.listdir(vari)
+    for item in list_dir_osd:
+        list1.insert(END, vari + "/" + item)
 
 
 def open_last_inst():
@@ -302,6 +318,12 @@ subMenu.add_command(label="Delete all songs", command=delete_all)
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Help", menu=subMenu)
 subMenu.add_command(label="About Us", command=about)
+
+
+subMenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="Favorites", menu=subMenu)
+subMenu.add_command(label="Open your favorite folder", command=fav_fol_open)
+subMenu.add_command(label="Add a Favorite folder", command=fav_fol)
 
 
 def status(status_):
