@@ -14,6 +14,7 @@ win.title("Vinyl Music Player")
 win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
+win.iconbitmap("Images/Vinyl Music Player icon.ico")
 pygame.mixer.init()
 
 
@@ -75,13 +76,18 @@ def fav_fol():
 
 
 def fav_fol_open():
-    list1.delete(0, END)
-    jk = open("Fav.txt", "r")
-    kj = jk.readlines()
-    vari = kj[-1]
-    list_dir_osd = os.listdir(vari)
-    for item in list_dir_osd:
-        list1.insert(END, vari + "/" + item)
+    try:
+        list1.delete(0, END)
+        jk = open("Fav.txt", "r")
+        kj = jk.readlines()
+        vari = kj[-1]
+        list_dir_osd = os.listdir(vari)
+        for item in list_dir_osd:
+            list1.insert(END, vari + "/" + item)
+    except FileNotFoundError:
+        pope = open("Fav.txt", "w")
+        pope.write("Cancelled")
+        pope.close()
 
 
 def open_last_inst():
@@ -200,6 +206,9 @@ def open_fol():
             status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or NameError or OSError:
         status(status_="Open a file/folder \t\t\t\t\t\t\t\t\t\t\t\t")
+        pope = open("DUMP.txt", "w")
+        pope.write("Cancelled")
+        pope.close()
     try:
         ima = w + "/" + "cover.jpg"
         img = Image.open(ima)
