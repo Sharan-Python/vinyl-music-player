@@ -73,6 +73,7 @@ def fav_fol():
     fav = open("fav.txt", "w")
     fav.write(fol_open_fav)
     fav.close()
+    status(status_="Updated your favorite folder \t\t\t\t\t\t\t\t\t\t\t\t\t\t")
 
 
 def fav_fol_open():
@@ -84,6 +85,7 @@ def fav_fol_open():
         list_dir_osd = os.listdir(vari)
         for item in list_dir_osd:
             list1.insert(END, vari + "/" + item)
+        status(status_="Opened your favorite folder \t\t\t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError:
         pope = open("Fav.txt", "w")
         pope.write("Cancelled")
@@ -101,7 +103,7 @@ def open_last_inst():
         if str(list_dir_os[any(list_dir_os)]).endswith('.mp3'):
             pygame.mixer.init()
             list1.selection_set(END)
-            status(status_="Opened a Music directory from previously opened folder\t\t\t\t\t\t\t\t\t\t\t\t")
+            status(status_="Opened a Music directory from previously opened folder \t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or IndexError:
         pass
     try:
@@ -205,7 +207,7 @@ def open_fol():
             list1.selection_set(END)
             status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or NameError or OSError:
-        status(status_="Open a file/folder \t\t\t\t\t\t\t\t\t\t\t\t")
+        status(status_="You didn't choose a folder \t\t\t\t\t\t\t\t\t\t\t\t")
         pope = open("DUMP.txt", "w")
         pope.write("Cancelled")
         pope.close()
@@ -254,7 +256,7 @@ def next_():
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
         tag = TinyTag.get(list1.get(next_one_int))
-        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
+        status(status_=tag.title + "  🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -272,7 +274,7 @@ def prev_():
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
         tag = TinyTag.get(list1.get(next_one_int))
-        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
+        status(status_=tag.title + "  🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
