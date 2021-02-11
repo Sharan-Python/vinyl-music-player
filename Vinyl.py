@@ -334,7 +334,6 @@ subMenu.add_command(label="About Us", command=about)
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Favorites", menu=subMenu)
 subMenu.add_command(label="Open your favorite folder", command=fav_fol_open)
-subMenu.add_command(label="Open a song from your favorite folder", command=open_song_fav_fol)
 subMenu.add_command(label="Add a Favorite folder", command=fav_fol)
 
 
