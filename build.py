@@ -13,6 +13,6 @@ if sys.platform == "win32":
 
 setup(name="Vinyl Music Player",
       version="0.1",
-      description="A Music Player for all your musical uses",
+      description="Vinyl music player",
       options={"build_exe": build_exe_options},
       executables=[Executable("Vinyl.py", base=base)])

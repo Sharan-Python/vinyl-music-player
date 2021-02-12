@@ -14,8 +14,9 @@ win.title("Vinyl Music Player")
 win["bg"] = "White"
 menubar = Menu(win)
 win.config(menu=menubar)
+win.iconbitmap("Images/Vinyl Music Player icon.ico")
 pygame.mixer.init()
-win.iconbitmap("Vinyl Music Player icon.ico")
+
 
 # class for About us
 class Popup(Toplevel):
@@ -67,6 +68,28 @@ def delete_all():
     status(status_="Deleted all \t\t\t\t\t\t\t\t\t\t\t\t")
 
 
+def fav_fol():
+    fol_open_fav = filedialog.askdirectory()
+    fav = open("fav.txt", "w")
+    fav.write(fol_open_fav)
+    fav.close()
+
+
+def fav_fol_open():
+    try:
+        list1.delete(0, END)
+        jk = open("Fav.txt", "r")
+        kj = jk.readlines()
+        vari = kj[-1]
+        list_dir_osd = os.listdir(vari)
+        for item in list_dir_osd:
+            list1.insert(END, vari + "/" + item)
+    except FileNotFoundError:
+        pope = open("Fav.txt", "w")
+        pope.write("Cancelled")
+        pope.close()
+
+
 def open_last_inst():
     try:
         pope = open("DUMP.txt", "r")
@@ -98,7 +121,7 @@ def open_last_inst():
         panel.image = imgp
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
@@ -130,8 +153,7 @@ def open_():
             pygame.mixer.init()
             list1.selection_set(END)
             tag = TinyTag.get(w)
-            Label(win, text=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t", bd=1, relief=SUNKEN,
-                  anchor=W).place(x=0, y=280)
+            status(status_=tag.title + " \t \t \t \t \t \t \t \t \t \t \t \t")
     except FileNotFoundError or NameError or OSError:
         status(status_="You didn't choose a file \t\t\t\t\t\t\t\t\t\t\t\t")
     try:
@@ -150,7 +172,7 @@ def open_():
         panel.image = img
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
@@ -184,6 +206,9 @@ def open_fol():
             status(status_="Opened a Music directory \t\t\t\t\t\t\t\t\t\t\t\t")
     except FileNotFoundError or NameError or OSError:
         status(status_="Open a file/folder \t\t\t\t\t\t\t\t\t\t\t\t")
+        pope = open("DUMP.txt", "w")
+        pope.write("Cancelled")
+        pope.close()
     try:
         ima = w + "/" + "cover.jpg"
         img = Image.open(ima)
@@ -201,7 +226,7 @@ def open_fol():
         panel.image = img
         panel.place(x=35, y=160)
     except FileNotFoundError or NameError or OSError:
-        ko = Image.open("Vinyl Music Player icon.png")
+        ko = Image.open("Images/Vinyl Music Player icon.png")
 
         # resize the image and apply a high-quality down sampling filter
         ko = ko.resize((110, 110), Image.ANTIALIAS)
@@ -228,8 +253,8 @@ def next_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        base = os.path.basename(list1.get(next_one_int))
-        status(status_=base + "\t\t\t\t\t\t\t\t\t\t\t")
+        tag = TinyTag.get(list1.get(next_one_int))
+        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -239,7 +264,6 @@ def prev_():
         currsel = list1.curselection()
         aa = int(currsel[0])
         next_one = aa - 1
-        (type(next_one))
         next_one_int = int(next_one)
         list1.selection_clear(aa)
         list1.selection_set(next_one_int)
@@ -247,8 +271,8 @@ def prev_():
         pygame.mixer.init()
         pygame.mixer.music.load(list1.get(next_one_int))
         pygame.mixer.music.play()
-        base = os.path.basename(list1.get(next_one_int))
-        status(status_=base + "\t\t\t\t\t\t")
+        tag = TinyTag.get(list1.get(next_one_int))
+        status(status_=tag.title + "🎵" + "\t\t\t\t\t\t\t\t\t\t\t")
     except pygame.error or IndexError:
         pass
 
@@ -279,10 +303,10 @@ def main_play():
         status(status_="Sorry, Vinyl could not read this song \t\t\t\t\t\t\t\t\t\t\t\t")
 
 
-q = PhotoImage(file="PlayButton.png")
-t = PhotoImage(file="PauseButton.png")
-o = PhotoImage(file="Forward.png")
-p = PhotoImage(file="Rewind.png")
+q = PhotoImage(file="Images/PlayButton.png")
+t = PhotoImage(file="Images/PauseButton.png")
+o = PhotoImage(file="Images/Forward.png")
+p = PhotoImage(file="Images/Rewind.png")
 
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="File", menu=subMenu)
@@ -303,6 +327,12 @@ subMenu.add_command(label="Delete all songs", command=delete_all)
 subMenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Help", menu=subMenu)
 subMenu.add_command(label="About Us", command=about)
+
+
+subMenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="Favorites", menu=subMenu)
+subMenu.add_command(label="Open your favorite folder", command=fav_fol_open)
+subMenu.add_command(label="Add a Favorite folder", command=fav_fol)
 
 
 def status(status_):
@@ -326,4 +356,6 @@ list1 = Listbox(win, bg="dark grey", fg="black", width=40)
 list1.place(x=210, y=10)
 
 open_last_inst()
+
+
 win.mainloop()
