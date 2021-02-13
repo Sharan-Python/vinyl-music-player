@@ -1,15 +1,16 @@
 
 
 # Vinyl Music Player
-This is a simple music player made with Python and Tkinter, code is simple and easy to understand.
 
-Play your favorite songs with ease
+## Introduction
+This is a simple music player made with Python and Tkinter, code is simple and easy to understand. Pygame is used for all the audio playing and Pillow and Tinytag is used for images displaying and metadata respectively
 
-Lets begin to 🎵🎵🎵🎵🎧🎧🎧🎧
 
-# Usage -
 
-## Steps to use - 
+
+## Usage -
+
+### Steps to use - 
 <br> 
 
 1 - Download and unzip the repository.
@@ -34,11 +35,11 @@ Lets begin to 🎵🎵🎵🎵🎧🎧🎧🎧
 
 6 - A file-dialog should come up, choose a `.mp3`, `.mx`, `.mod` or a `.wav` file or a folder
 
-7 - The song name should come up on the listbox, click the play button.
+7 - The song path should come up on the listbox, click the play button.
 
 8 - Done!!! Your song should be playing now.
 
-# Features
+## Features
 
 1 - Light and dark mode - Click modes and choose Light or Dark
 
@@ -53,7 +54,7 @@ Lets begin to 🎵🎵🎵🎵🎧🎧🎧🎧
 5- Delete song functionlity- use the delete cascade to delete one selected song or to delete all songs
 
 6- Opens the folder you opened last time- If you ran the player and opened a folder, it will open the same folder on next startup automatically
-# Installer
+## Installer
 The file `Vinyl Music Player x64 Installer.exe` is a distributable installer for the app. Can be used just like a regular app installer. Note that this installer will only be updated when major changes are made, minor changes to the player will not result in an update to the installer
 
 7- Favorite folder option - Under the Favorites sub-menu you can add a favorite folder and then click it anytime to open that folder you chose
@@ -67,27 +68,29 @@ Steps to convert to executable-
 
 4- Run Vinyl.exe
 
-# Communicate with me
+## Communicate with me
 Use [Discussions ](https://github.com/Sharan-Python/vinyl-music-player/discussions) to talk about this repo
-# Credits 
+## Credits 
 icons for the buttons- Provided by Ipython08
 
 New Vinyl Music Player icon- provided by Ipython08
 
 Volume slider, some other stuff and bug fixes :)- provided by Ipython08
 
-# Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
+## Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
-# Important info
+
+## Important info
+
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
 usage for such purposes.
 
 NOTE - This application has been tested with successful results with the Windows operating system, it has been test with unsuccessful results on Mac OS and has not been tested on Linux, hence I only expect the application to run on Windows and not any other OS
 
 NOTE - Any executable file in this repository may be blocked by your OS or by your browser or some other security software, these files if downloaded and blocked may cause them to go corrupt and not work properly, to get around this, I recommend that you download the whole repository at once and then use the executable files. I also give confirmation that no file in this repository is capable of doing harm or good to you/your computer software/your computer hardware.
-
-# Profile views -
+# Fun stuff
+## Profile views -
 <img src="https://camo.githubusercontent.com/69977ae9b6a50d8ed4c1043533cb99a87a1ba443024fd9c622abf7b0b18aa545/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f73686172616e2d707974686f6e2f636f756e742e737667" />
 
 INVITE YOUR FRIENDS TO VIEW MY PROFILE AND REPOSITORIES OR I WILL TAKE YOUR DOG
