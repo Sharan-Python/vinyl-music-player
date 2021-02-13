@@ -80,7 +80,9 @@ Volume slider, some other stuff and bug fixes :)- provided by Ipython08
 ## Go to [this link](https://github.com/Sharan-Python/vinyl-music-player/wiki) 
 To see the current status on the project and upcoming versions
 
+
 ## Important info
+
 NOTE - This application is intended to be used either for personal use or for educational purposes, use in any any other field is at your own risk even though the Licence allows
 usage for such purposes.
 
