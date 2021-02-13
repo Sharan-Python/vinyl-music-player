@@ -35,7 +35,7 @@ This is a simple music player made with Python and Tkinter, code is simple and e
 
 6 - A file-dialog should come up, choose a `.mp3`, `.mx`, `.mod` or a `.wav` file or a folder
 
-7 - The song name should come up on the listbox, click the play button.
+7 - The song path should come up on the listbox, click the play button.
 
 8 - Done!!! Your song should be playing now.
 
