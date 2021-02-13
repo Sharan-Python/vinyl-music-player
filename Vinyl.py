@@ -5,7 +5,7 @@ from tkinter import filedialog
 from PIL import ImageTk, Image
 from tinytag import TinyTag
 import os
-
+import time
 
 win = Tk()
 win.geometry("500x300")
@@ -16,7 +16,7 @@ menubar = Menu(win)
 win.config(menu=menubar)
 win.iconbitmap("Images/Vinyl Music Player icon.ico")
 pygame.mixer.init()
-
+time.sleep(1)
 
 # class for About us
 class Popup(Toplevel):
@@ -359,5 +359,5 @@ list1.place(x=210, y=10)
 
 open_last_inst()
 
-
 win.mainloop()
+
