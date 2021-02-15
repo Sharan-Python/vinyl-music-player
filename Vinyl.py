@@ -315,59 +315,57 @@ def main_play():
         status(status_="Sorry, Vinyl could not read this song \t\t\t\t\t\t\t\t\t\t\t\t")
 
 
-q = PhotoImage(file="Images/PlayButton.png")
-t = PhotoImage(file="Images/PauseButton.png")
-o = PhotoImage(file="Images/Forward.png")
-p = PhotoImage(file="Images/Rewind.png")
-
-subMenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="File", menu=subMenu)
-subMenu.add_command(label="Open a Song", command=open_)
-subMenu.add_command(label="Open a Music folder", command=open_fol)
-subMenu.add_command(label="Exit", command=win.destroy)
-
-subMenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="Modes", menu=subMenu)
-subMenu.add_command(label="Light", command=white)
-subMenu.add_command(label="Dark", command=dark)
-
-subMenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="Delete", menu=subMenu)
-subMenu.add_command(label="Delete a song", command=delete)
-subMenu.add_command(label="Delete all songs", command=delete_all)
-
-subMenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="Help", menu=subMenu)
-subMenu.add_command(label="About Us", command=about)
-
-
-subMenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="Favorites", menu=subMenu)
-subMenu.add_command(label="Open your favorite folder", command=fav_fol_open)
-subMenu.add_command(label="Add a Favorite folder", command=fav_fol)
-
-
 def status(status_):
     statusbar = Label(win, text=status_, bd=1, relief=SUNKEN, anchor=W)
     statusbar.place(x=0, y=280)
 
 
-status(status_="Open an audio file \t\t\t\t\t\t\t\t\t\t\t\t")
+q = PhotoImage(file="Images/PlayButton.png")
+t = PhotoImage(file="Images/PauseButton.png")
+o = PhotoImage(file="Images/Forward.png")
+p = PhotoImage(file="Images/Rewind.png")
 
-scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
-scale.set(50)
-pygame.mixer.music.set_volume(0.10)
-scale.place(x=35, y=90)
+if __name__ == "__main__":
+    subMenu = Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="File", menu=subMenu)
+    subMenu.add_command(label="Open a Song", command=open_)
+    subMenu.add_command(label="Open a Music folder", command=open_fol)
+    subMenu.add_command(label="Exit", command=win.destroy)
 
-Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
-Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
-Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
-Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+    subMenu = Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="Modes", menu=subMenu)
+    subMenu.add_command(label="Light", command=white)
+    subMenu.add_command(label="Dark", command=dark)
 
-list1 = Listbox(win, bg="dark grey", fg="black", width=40)
-list1.place(x=210, y=10)
+    subMenu = Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="Delete", menu=subMenu)
+    subMenu.add_command(label="Delete a song", command=delete)
+    subMenu.add_command(label="Delete all songs", command=delete_all)
 
-open_last_inst()
+    subMenu = Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="Help", menu=subMenu)
+    subMenu.add_command(label="About Us", command=about)
+
+    subMenu = Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="Favorites", menu=subMenu)
+    subMenu.add_command(label="Open your favorite folder", command=fav_fol_open)
+    subMenu.add_command(label="Add a Favorite folder", command=fav_fol)
+
+    status(status_="Open an audio file \t\t\t\t\t\t\t\t\t\t\t\t")
+
+    scale = Scale(from_=0, to=100, orient=HORIZONTAL, command=set_vol)
+    scale.set(50)
+    pygame.mixer.music.set_volume(0.10)
+    scale.place(x=35, y=90)
+
+    Button(win, image=q, borderwidth=0, command=main_play).place(x=20, y=20)
+    Button(win, image=o, borderwidth=0, command=next_).place(x=360, y=200)
+    Button(win, image=t, borderwidth=0, command=pause).place(x=100, y=20)
+    Button(win, image=p, borderwidth=0, command=prev_).place(x=280, y=200)
+
+    list1 = Listbox(win, bg="dark grey", fg="black", width=40)
+    list1.place(x=210, y=10)
+
+    open_last_inst()
 
 win.mainloop()
-
