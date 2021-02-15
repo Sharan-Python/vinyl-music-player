@@ -18,6 +18,7 @@ win.iconbitmap("Images/Vinyl Music Player icon.ico")
 pygame.mixer.init()
 time.sleep(1)
 
+
 # class for About us
 class Popup(Toplevel):
     def __init__(self, title='', message='', master=None, **kwargs):
@@ -75,7 +76,6 @@ def fav_fol():
     fav.close()
 
     status(status_="Updated your favorite folder \t\t\t\t\t\t\t\t\t\t\t\t\t\t")
-
 
 
 def fav_fol_open():
