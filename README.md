@@ -64,7 +64,7 @@ Steps to convert to executable-
 
 2- cd to the downloaded folder and run `python build.py build` for microsoft store python installations and `py build.py build` for installations downloaded from python.org
 
-3- Copy the images, namely `Vinyl.jpg` `player.jpg` `PauseButton.png` `PlayButton.png` and put it in build\exe.win-amd64-3.9
+3- Copy the `images` folder and put it in build\exe.win-amd64-3.9
 
 4- Run Vinyl.exe
 
